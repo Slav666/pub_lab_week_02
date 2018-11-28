@@ -1,9 +1,9 @@
 class Customer
 
 
-  def initialize(name, wallet)
-    @customer_name = name
-    @customer_wallet = wallet
+  def initialize(options)
+    @customer_name = options[:name]
+    @customer_wallet = options[:wallet]
   end
 
 
@@ -15,7 +15,9 @@ class Customer
     return @customer_wallet
   end
 
-
+  def customer_buys_drink(chosen_drink)
+    @customer_wallet -= chosen_drink.check_drink_price
+  end
 
 
 

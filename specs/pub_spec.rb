@@ -9,8 +9,7 @@ class PubTest < MiniTest::Test
 
   def setup
     @drink_a = Drink.new({name: "wine", price: 5})
-    # @drink_b = Drink.new("white russian", 10)
-    # @drink_c = Drink.new("beer", 1)
+    @customer_1 = Customer.new({name: "Billy", wallet: 50})
     @pub = Pub.new("The Matrix", 5000, [@drink_a])
   end
 
@@ -27,11 +26,12 @@ class PubTest < MiniTest::Test
     assert_equal([@drink_a], @pub.check_pub_drinks)
   end
 
-  def test_customer_can_buy_drink
-    @pub.customer_pays(@drink_a)
+  def test_pub_till_increases
+    @pub.pub_gets_money(@drink_a)
     assert_equal(5005, @pub.check_pub_till)
   end
 
+  
 
 
 

@@ -19,9 +19,10 @@ class Pub
     return @pub_drinks
   end
 
-  def customer_pays(chosen_drink)
+  def pub_gets_money(chosen_drink)
     @pub_till += chosen_drink.check_drink_price
   end
+
 
 
 
