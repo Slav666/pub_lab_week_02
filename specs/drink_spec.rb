@@ -6,8 +6,8 @@ require_relative("../drink")
 class DrinkTest < MiniTest::Test
 
   def setup
-    @drink_1 = Drink.new("red wine", 3) #each of these is its OWN DRINK
-    @drink_2 = Drink.new("morgan spice", 7)
+    @drink_1 = Drink.new({name: "wine", price: 5}) #each of these is its OWN DRINK
+    @drink_2 = Drink.new({name:"morgan spice", price: 7})
   end
 
   # def test_check_drink_class_exists #must always start with test
@@ -15,12 +15,12 @@ class DrinkTest < MiniTest::Test
   # end
 
   def test_check_drink_name
-    assert_equal("red wine", @drink_1.check_drink_name)
+    assert_equal("wine", @drink_1.check_drink_name)
   end
 
   def test_check_drink_price
-    assert_equal(3, @drink_1.check_drink_price)
+    assert_equal(5, @drink_1.check_drink_price)
   end
 
-  
+
 end

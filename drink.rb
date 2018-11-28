@@ -2,9 +2,9 @@ class Drink
 
   # attr_reader :drink_name
 
-  def initialize(name, price)
-    @drink_name = name
-    @drink_price = price
+  def initialize(options)
+    @drink_name = options[:name]
+    @drink_price = options[:price]
   end
 
   def check_drink_name
