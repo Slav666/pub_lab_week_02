@@ -23,6 +23,16 @@ class Pub
     @pub_till += chosen_drink.check_drink_price
   end
 
+  def sell_drink(drink, customer)
+    @pub_drinks
+    @customer_1
+
+  end
+
+
+
+
+
 
 
 
